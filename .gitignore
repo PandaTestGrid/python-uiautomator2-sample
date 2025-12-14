@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 虚拟环境
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# 测试报告
+reports/
+allure-results/
+allure-report/
+*.html
+
+# 日志文件
+*.log
+logs/
+
+# 配置文件（包含敏感信息）
+config/local_config.py
+.env
+
+# 截图和临时文件
+screenshots/
+temp/
+*.png
+*.jpg
+
+# OS
+.DS_Store
+Thumbs.db
+
