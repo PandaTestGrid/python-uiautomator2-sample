@@ -15,4 +15,6 @@ echo -e "${GREEN}开始运行测试...${NC}"
 pytest "$@"
 
 echo -e "${GREEN}测试完成！${NC}"
+echo -e "${YELLOW}HTML 报告: reports/report.html${NC}"
+echo -e "${YELLOW}JSON 报告: reports/report.json${NC}"
 

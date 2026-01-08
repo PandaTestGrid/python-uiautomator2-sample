@@ -93,8 +93,26 @@ pytest -n auto
 # 生成 HTML 报告
 pytest --html=reports/report.html --self-contained-html
 
+# 生成 JSON 报告
+pytest --json-report --json-report-file=reports/report.json
+
+# 同时生成 HTML 和 JSON 报告
+pytest --html=reports/report.html --json-report --json-report-file=reports/report.json
+
+# 查看 JSON 报告内容
+python json_report_viewer.py
+
 # 指定设备序列号
 DEVICE_SERIAL=设备序列号 pytest
+
+# 使用设备选择脚本（推荐）
+./run_with_device.sh
+
+# 选择测试类型并执行
+./run_selected_tests.sh
+
+# 生成专用 JSON 报告脚本
+./generate_json_report.sh
 ```
 
 ## 📝 编写测试用例

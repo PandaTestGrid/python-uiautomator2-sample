@@ -16,11 +16,11 @@ logger = setup_logger()
 
 class BaseTest:
     """测试基类"""
-    
-    def __init__(self, device: u2.Device):
+
+    def __init__(self, device: Optional[u2.Device] = None):
         """
         初始化测试类
-        
+
         Args:
             device: uiautomator2 设备对象
         """

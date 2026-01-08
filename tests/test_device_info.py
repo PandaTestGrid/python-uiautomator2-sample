@@ -9,14 +9,10 @@ from base.base_test import BaseTest
 
 class TestDeviceInfo(BaseTest):
     """设备信息测试类"""
-    
-    @pytest.fixture(autouse=True)
-    def setup(self, device: u2.Device):
-        """测试设置"""
-        super().__init__(device)
-        self.setup_method()
-        yield
-        self.teardown_method()
+
+    def __init__(self):
+        super().__init__()
+        self.device = None
     
     @pytest.mark.smoke
     @pytest.mark.android
@@ -24,13 +20,14 @@ class TestDeviceInfo(BaseTest):
         """
         测试获取设备基本信息
         """
+        self.device = device
         info = device.info
-        
+
         # 验证必要字段
         assert "version" in info, "设备信息缺少版本号"
         assert "sdk" in info, "设备信息缺少 SDK 版本"
         assert "productName" in info, "设备信息缺少产品名称"
-        
+
         self.logger.info(f"设备版本: {info.get('version')}")
         self.logger.info(f"SDK 版本: {info.get('sdk')}")
         self.logger.info(f"产品名称: {info.get('productName')}")
