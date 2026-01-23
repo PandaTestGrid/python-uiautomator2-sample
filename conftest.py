@@ -22,7 +22,7 @@ def device_config():
     设备配置 fixture
     可以通过环境变量或配置文件指定设备序列号
     """
-    device_serial = os.getenv("DEVICE_SERIAL", None)
+    device_serial = os.getenv("DEVICE_ID", None)
     return {
         "serial": device_serial,
         "timeout": 10.0,
