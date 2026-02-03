@@ -21,7 +21,6 @@ class TestDeviceInfo(BaseTest):
         """
         测试获取设备基本信息
         """
-        print(info)
         for i in range(180):
             import time
             time.sleep(1)
