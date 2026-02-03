@@ -9,7 +9,7 @@ class Config:
     """配置类"""
     
     # 设备配置
-    DEVICE_SERIAL = os.getenv("DEVICE_SERIAL", None)  # 设备序列号，None 表示使用默认设备
+    DEVICE_ID = os.getenv("DEVICE_ID", None)  # 设备序列号，None 表示使用默认设备
     DEVICE_TIMEOUT = float(os.getenv("DEVICE_TIMEOUT", "10.0"))  # 设备操作超时时间
     
     # 应用配置
@@ -38,7 +38,7 @@ class Config:
             设备配置字典
         """
         return {
-            "serial": cls.DEVICE_SERIAL,
+            "serial": cls.DEVICE_ID,
             "timeout": cls.DEVICE_TIMEOUT,
         }
     

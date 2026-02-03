@@ -17,16 +17,9 @@ logger = setup_logger()
 class BaseTest:
     """测试基类"""
 
-    def __init__(self, device: Optional[u2.Device] = None):
-        """
-        初始化测试类
+    device: Optional[u2.Device] = None
+    logger = logger
 
-        Args:
-            device: uiautomator2 设备对象
-        """
-        self.device = device
-        self.logger = logger
-    
     def setup_method(self):
         """每个测试方法执行前的设置"""
         self.logger.info(f"开始执行测试: {self.__class__.__name__}")

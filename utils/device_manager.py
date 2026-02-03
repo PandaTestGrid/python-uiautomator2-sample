@@ -88,7 +88,9 @@ class DeviceManager:
             return False
         
         try:
-            self.device.info
+            var = self.device.info
+            if var:
+                logger.info("设备已连接")
             return True
         except Exception:
             return False
